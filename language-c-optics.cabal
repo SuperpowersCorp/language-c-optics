@@ -16,33 +16,35 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   ghc-options:         -Wall
-  exposed-modules:     Lib
-  other-modules:       Lib.Prelude
-  build-depends:       base >= 4.7 && < 5
-                     , protolude >= 0.1.6 && < 0.2
+  exposed-modules:     Language.C.Optics
+  other-modules:       Language.C.Prelude
+  build-depends:       base                               >= 4.7 && < 5
+                     , bytestring
+                     , language-c
+                     , lens
+                     , pretty
+                     , protolude
+                     , tuple
   default-language:    Haskell2010
-  default-extensions:  OverloadedStrings, NoImplicitPrelude
-
-executable language-c-optics-exe
-  hs-source-dirs:      app
-  main-is:             Main.hs
-  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
-  build-depends:       base
-                     , language-c-optics
-                     , protolude >= 0.1.6 && < 0.2
-  default-language:    Haskell2010
-  default-extensions:  OverloadedStrings, NoImplicitPrelude
+  default-extensions:  OverloadedStrings
+                     , NoImplicitPrelude
 
 test-suite language-c-optics-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
   main-is:             Spec.hs
   build-depends:       base
+                     , bytestring
+                     , language-c
                      , language-c-optics
-                     , protolude >= 0.1.6 && < 0.2
+                     , lens
+                     , pretty
+                     , protolude
+                     , tuple
   ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
-  default-extensions:  OverloadedStrings, NoImplicitPrelude
+  default-extensions:  OverloadedStrings
+                     , NoImplicitPrelude
 
 source-repository head
   type:     git
