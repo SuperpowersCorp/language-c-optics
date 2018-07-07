@@ -5,6 +5,7 @@ module Language.C.Prelude
 import Control.Lens as Exports
 import Protolude    as Exports hiding ( (&)
                                       , (<.>)
+                                      , (<&>)  -- sigh
                                       , Strict
                                       , from
                                       , to

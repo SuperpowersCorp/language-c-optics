@@ -23,6 +23,11 @@ _C = prism g s
       where
         startPos = position 0 "src" 0 0
 
+_Ident :: Prism' Ident ([Char], Int, NodeInfo)
+_Ident = iso g (uncurryN Ident)
+  where
+    g (Ident a b c) = (a, b, c)
+
 _CTranslUnit :: Iso' (CTranslationUnit NodeInfo) ([CExternalDeclaration NodeInfo], NodeInfo)
 _CTranslUnit = iso g (uncurry CTranslUnit)
   where
