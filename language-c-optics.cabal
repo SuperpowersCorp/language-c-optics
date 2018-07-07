@@ -1,6 +1,6 @@
 name:                language-c-optics
 version:             0.1.0.0
-synopsis:            Optics for language-javascript.
+synopsis:            Optics for language-c.
 homepage:            https://github.com/githubuser/language-c-optics#readme
 license:             BSD3
 license-file:        LICENSE
