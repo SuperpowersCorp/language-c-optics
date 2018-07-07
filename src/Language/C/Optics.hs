@@ -2,10 +2,11 @@
 
 module Language.C.Optics where
 
-import Language.C.Prelude
-
+import Control.Lens
+import Data.Bifunctor              ( first )
+import Data.ByteString             ( ByteString )
 import Data.ByteString.Char8       ( pack )
-import Data.Tuple.Curry
+import Data.Tuple.Curry            ( uncurryN )
 import Language.C.Data.Ident
 import Language.C.Data.Node
 import Language.C.Data.Position

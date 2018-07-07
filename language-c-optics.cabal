@@ -1,13 +1,12 @@
 name:                language-c-optics
 version:             0.1.0.0
--- synopsis:
--- description:
+synopsis:            Optics for language-javascript.
 homepage:            https://github.com/githubuser/language-c-optics#readme
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2018 Author name here
+author:              Superpowers Corp
+maintainer:          john@superpowerscorp.com
+copyright:           2018 Superpowers Corp
 category:            Web
 build-type:          Simple
 extra-source-files:  README.md
@@ -17,34 +16,13 @@ library
   hs-source-dirs:      src
   ghc-options:         -Wall
   exposed-modules:     Language.C.Optics
-  other-modules:       Language.C.Prelude
   build-depends:       base                               >= 4.7 && < 5
                      , bytestring
                      , language-c
                      , lens
                      , pretty
-                     , protolude
                      , tuple
   default-language:    Haskell2010
-  default-extensions:  OverloadedStrings
-                     , NoImplicitPrelude
-
-test-suite language-c-optics-test
-  type:                exitcode-stdio-1.0
-  hs-source-dirs:      test
-  main-is:             Spec.hs
-  build-depends:       base
-                     , bytestring
-                     , language-c
-                     , language-c-optics
-                     , lens
-                     , pretty
-                     , protolude
-                     , tuple
-  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N
-  default-language:    Haskell2010
-  default-extensions:  OverloadedStrings
-                     , NoImplicitPrelude
 
 source-repository head
   type:     git
